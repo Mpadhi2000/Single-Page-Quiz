@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="personality-quiz.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <!-- Landing Page -->
+        <div id="landing-page" class="quiz-section active">
+            <div class="quiz-content">
+                <div class="quiz-header">
+                    <h1>Discover Your Leadership Style</h1>
+                    <p>Take our 5-minute quiz to uncover your unique approach to contact center leadership</p>
+                </div>
+                
+                <div class="quiz-form-container">
+                    <form id="email-form">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" placeholder="you@example.com" required>
+                            <p id="email-error" class="error-message"></p>
+                        </div>
+                        <button type="submit" id="start-quiz-btn">Start Quiz</button>
+                    </form>
+                </div>
+                
+                <p class="quiz-disclaimer">By taking this quiz, you'll gain insights into your leadership approach and discover strategies to enhance your effectiveness.</p>
+            </div>
+        </div>
+        
+        <!-- Quiz Page -->
+        <div id="quiz-page" class="quiz-section">
+            <div class="quiz-content">
+                <div class="quiz-progress">
+                    <div class="quiz-progress-text">
+                        <span id="question-number">Question 1 of 5</span>
+                        <span id="progress-percentage">20%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress-indicator" class="progress-indicator"></div>
+                    </div>
+                </div>
+                
+                <div class="quiz-card">
+                    <h2 id="question-text"></h2>
+                    
+                    <div id="options-container" class="options-container">
+                        <!-- Options will be inserted here by JavaScript -->
+                    </div>
+                    
+                    <div class="quiz-actions">
+                        <button id="next-btn" disabled>Next Question</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Results Page -->
+        <div id="results-page" class="quiz-section">
+            <div class="quiz-content">
+                <div class="results-card">
+                    <div id="results-header" class="results-header">
+                        <div id="personality-emoji" class="personality-emoji"></div>
+                        <h1 id="personality-title" class="personality-title"></h1>
+                        <p>Your Contact Center Leadership Style</p>
+                    </div>
+                    
+                    <div class="results-content">
+                        <h2>Your Leadership Profile</h2>
+                        <p id="personality-description" class="personality-description"></p>
+                        
+                        <div class="results-actions">
+                            <button id="share-btn" class="action-btn share-btn">
+                                <span class="icon">↗</span> Share Result
+                            </button>
+                            <button id="retake-btn" class="action-btn retake-btn">
+                                <span class="icon">↺</span> Retake Quiz
+                            </button>
+                            <button id="explore-btn" class="action-btn explore-btn">
+                                <span class="icon">→</span> Explore Solutions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <p id="thank-you-message" class="thank-you-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="personality-quiz.js"></script>
+</body>
+</html>
